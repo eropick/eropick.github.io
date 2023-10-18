@@ -15,6 +15,52 @@
                 autoplay : "autoplay=1",
                 allow : "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             }
+
+            //윈도우가 열릴 때 저장된 플레이 리스트를 불러와서 설정
+            window.onload = loadPlayList; 
+            //윈도우가 닫힐 때 플레이 리스트 저장
+            addEventListener("unload",savePlaylist);
+
+            function loadPlayList(){
+                //1. 리스트로부터 값을 가져온다.
+                let musicNameList = localStorage.getItem("musicNameList");
+                let musicUrlList = localStorage.getItem("musicUrlList");
+
+                //2. 키가 있는 경우에만 저장된 데이터를 추가한다.
+                if(musicNameList!=null&&musicUrlList!="empty"){ 
+                    let musicNames = JSON.parse(musicNameList);
+                    let musicUrls = JSON.parse(musicUrlList);
+                    for(let i=0;i<musicNames.length;++i){
+                        addMusicInList(musicNames[i],musicUrls[i]);
+                    }
+                }
+            }
+
+            //현재 플레이 리스트 저장 
+            function savePlaylist(){
+                let playlist = document.getElementById("playlist");
+                let musicNameList = null;
+                let musicUrlList = null;
+                let childCnt = playlist.childElementCount; 
+                //음악 이름과 주소를 배열에 저장
+                if(childCnt>0){ //값이 있을 경우에만 생성
+                    musicNameList = new Array();
+                    musicUrlList = new Array();
+                }
+                for(let i=0;i<childCnt;++i){ 
+                    let name = playlist.children[i].innerHTML;
+                    let url = playlist.children[i].title;
+                    musicNameList.push(name);
+                    musicUrlList.push(url);
+                }
+                if(musicNameList!=null){ //값이 존재하면 리스트로 저장
+                    localStorage.setItem("musicNameList",JSON.stringify(musicNameList));
+                    localStorage.setItem("musicUrlList",JSON.stringify(musicUrlList));
+                }
+                else //값이 없는 경우를 url이 empty인 것으로 표기
+                    localStorage.setItem("musicUrlList","empty");
+            }
+
             function clearText(){
                 let name = document.getElementById("musicName");
                 let link = document.getElementById("musicLink");
@@ -46,8 +92,37 @@
                 }
             }
             
-            var isDelete=false; //삭제 버튼 체커
+            function addMusic(){ //음악 추가
+                let name =document.getElementById("musicName");
+                let link =document.getElementById("musicLink");
+                if(name.value =="")
+                    alert("음악 이름을 입력해주세요!"); //이거 따로 메시지 띄우도록 변경 고려
+                else{
+                    if(link.value =="") //링크가 없으면 기본 값 할당
+                        link.value="https://www.youtube.com/watch?v=a_k-dCgubFo";
+                        addMusicInList(name.value,link.value); //음악 이름, 링크를 리스트에 넣어준다.
+                    }
+                clearText();
+                searchMusic();//리스트 갱신
+            }
 
+            function addMusicInList(musicName,musicUrl){
+                //li부모 가져오기
+                let list =document.getElementById("playlist");
+                //li생성
+                let newLi =document.createElement("li");
+                newLi.innerHTML=musicName; 
+                newLi.title=musicUrl; 
+                newLi.onclick =function(){
+                    if(isDelete) //버튼 활성화 시
+                        checker(this);
+                    else //삭제 버튼 활성화가 안 된경우 
+                        createPlayer(this); 
+                    } //노래 제목 클릭 시 플레이어 생성
+                list.appendChild(newLi); 
+            }
+
+            var isDelete=false; //삭제 버튼 체커
             function delMusic(btn){ //음악 삭제
                 if(isDelete){ //삭제 버튼 활성화 시
                     //체크 된 음악을 삭제함
@@ -86,32 +161,7 @@
                 return checkedList;
             }
 
-            function addMusic(){ //음악 추가
-                let name = document.getElementById("musicName");
-                let link = document.getElementById("musicLink");
-                if(name.value==""){
-                    alert("음악 이름을 입력해주세요!");
-                }
-                else{
-                    if(link.value=="") //링크가 없으면 기본 값 할당
-                        link.value="https://www.youtube.com/watch?v=a_k-dCgubFo";
-                    let list = document.getElementById("playlist");
-                    //리스트 생성
-                    let newLi = document.createElement("li");
-                    newLi.innerHTML=name.value; //내용으로 노래제목
-                    newLi.title=link.value; //title로 link가 들어간다.
-                    newLi.onclick=function(){
-                        if(isDelete) //버튼 활성화 시
-                            checker(this);
-                        else //삭제 버튼 활성화가 안 된경우 
-                            createPlayer(this); 
-                    } //노래 제목 클릭 시 플레이어 생성
-                    list.appendChild(newLi); 
-                }
-                clearText();
-                searchMusic();//리스트 갱신
-            }
-
+            //음악을 체크함
             function checker(music){
                 let cancle = music.style.textDecoration;
                 if(cancle==""){ //변동값
@@ -153,11 +203,25 @@
 
             //유튜브 링크로부터 VideoID추출
             function getVideoID(link){
-                let str = new String(link);
-                let vID = str.split("?v=")[1]; 
+                let vID = getSplitUrl(new String(link));
                 return vID;
             }
-
+            //다양한 유튜브 링크에 대한 스플릿 반환
+            function getSplitUrl(url){
+                const code = new Array("?v=","&",".be/","?");
+                let urlSplit=null;
+                let result=null;
+                if(url.indexOf(code[0])!=-1){ 
+                    urlSplit = url.split(code[0]); //?v=로 분할한 경우 1번에 저장
+                    result = urlSplit[1].split(code[1]); //&로 분할하면 0번에 저장
+                }
+                else{
+                    urlSplit = url.split(code[2]); //.be/로 분할한 경우 1번에 저장
+                    result = urlSplit[1].split(code[3]); //?f로 분할하면 0번에 저장
+                }
+                return result[0];
+            }
+            
         </script>
         <style>
             body{ margin:0%; padding:0%; }
