@@ -8,26 +8,34 @@
         window.onload =makeTable;
         //테이블 생성
         function makeTable(){
-            let words = localStorage.getItem("words");
-            let means = localStorage.getItem("means");
+            let w = localStorage.getItem("words");
+            let m = localStorage.getItem("means");
+            let words = JSON.parse(w);
+            let means = JSON.parse(m);
             if(words!=null){
                 if(opener.tableOption==0){
-                    makeTableHead();
-                    inputValueInTable(JSON.parse(words));
+                    if(words.length<2) //단어수 1개 이하 일 경우
+                        makeTableHead(2);
+                    else
+                        makeTableHead(4);
+                    inputValueInTable(4,words);
                 }
                 else if(opener.tableOption==1){
-                    makeTableHead(reverse=true);
-                    inputValueInTable(JSON.parse(means));
+                    if(means.length<2)
+                        makeTableHead(2,reverse=true);
+                    else
+                        makeTableHead(4,reverse=true);
+                    inputValueInTable(4,means);
                 }
             }
         }
         //값 채우기
-        function inputValueInTable(data){
+        function inputValueInTable(num,data){
             let voca = document.getElementById("voca");
             let vocaCnt = 0;
             while(vocaCnt<data.length){
                 let tbRow = document.createElement("tr");
-                for(let j=0;j<4;++j){
+                for(let j=0;j<num;++j){
                     let td = document.createElement("td");
                     if(j%2==0){
                         if(vocaCnt==data.length)
@@ -41,11 +49,11 @@
             }
         }
         //테이블 헤더 만들기
-        function makeTableHead(reverse=false){
+        function makeTableHead(num,reverse=false){
             let thead = document.getElementById("vhead");
             let thRow = document.createElement("tr");
             let ths = new Array();
-            for(let i=0;i<4;++i){
+            for(let i=0;i<num;++i){
                 ths.push(document.createElement("th")); 
                 if(reverse)
                     ths[i].innerHTML = i%2==0?"의미":"단어";

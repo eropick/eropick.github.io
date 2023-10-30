@@ -42,15 +42,33 @@
         }
         /*===================퀴즈 생성===================*/
         function openQuiz(){
-            window.open("./vocaQuiz.html","_blank","toolbar=yes");
+            let words = localStorage.getItem("words");
+            if(isEmptyList()||words.length<4) //퀴즈 유효성 검사
+                myAlert("퀴즈 최소 단어 수 : 4",2);
+            else //만족하는 경우 생성
+                window.open("./vocaQuiz.html","_blank","toolbar=yes");
         }
         /*===================테이블 생성===================*/
         function openTable(option){
-            tableOption = option.value=="테이블 생성1"?0:1;
-            window.open("./vocaTable.html","_blank","toolbar=yes");
+            if(isEmptyList()) //테이블 유효성 검사
+                myAlert("테이블 최소 단어 수 : 1",2);
+            else{
+                tableOption = option.value=="테이블 생성1"?0:1;
+                window.open("./vocaTable.html","_blank","toolbar=yes");
+            }
         }
         /*===================기타===================*/
-        
+        //스토리지 비어있는지 여부 판단
+        function isEmptyList(){
+            let words = localStorage.getItem("words");
+            let means = localStorage.getItem("means");
+            if(words==null||means==null)
+                return true;
+            else if(words=="-1"||means=="-1")
+                return true;
+            else false;
+        }
+
         //local에 단어 저장하기
         function saveWordsInLocal(){
             let vocaList = document.getElementsByTagName("li"); 
@@ -66,6 +84,10 @@
                 localStorage.setItem("words",JSON.stringify(vocaWord));
                 localStorage.setItem("means",JSON.stringify(vocaMean));    
             }
+            else{
+                localStorage.setItem("words","-1");
+                localStorage.setItem("means","-1");    
+            }
         }
         
         //local에 있는 단어 가져오기
@@ -73,7 +95,7 @@
             let words = localStorage.getItem("words");
             let means = localStorage.getItem("means");
             let voca = new Array();
-            if(words!=null&&means!=null){
+            if(!isEmptyList()){
                 voca.push(JSON.parse(words));
                 voca.push(JSON.parse(means)); 
                 return voca;
@@ -360,7 +382,7 @@
             float:left; width:80%; padding-left:15px;
         }
         body>aside{
-            float:left; width:18.7%; text-align: center;
+            float:left; width:18%; text-align: center;
         }
         #genVoca1,#genVoca2,#genQuiz{
             width : 80%;

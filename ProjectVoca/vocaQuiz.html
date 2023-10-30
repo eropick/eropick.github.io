@@ -6,30 +6,27 @@
     <title>vocaQuiz</title>
     <script>
         window.onload=newQuiz;
-        var checked=false; //체크 공유 여부
+        var checkedNode=null;
         var timerID = null;
 
+        //새 퀴즈 생성합
         function newQuiz(){
-            //유효성 검사 실패 시 종료
             let w = localStorage.getItem("words");
             let m = localStorage.getItem("means");
-            if(w==null||m==null) 
-                window.close();
             words = JSON.parse(w);
             means = JSON.parse(m);
-            if(words.length<4||means.length<4)
-                window.close();
             //이전 퀴즈 초기화
             initQuiz();
-            //문제 생성 시작
+            //퀴즈 변경
             changeQuiz(words,means);
         }
+        
         function changeQuiz(words,means){
             let quizType = myIntRandom(0,1); //단어문제 or 의미문제 
             let choiceIndices = getRandomChoice(4,words.length);
             let answerIndex = myIntRandom(0,3); //문제낼 인덱스 번호 추출
             let question = document.getElementById("question");
-            let options = document.getElementsByTagName("li");
+            let options = document.getElementsByTagName("li"); //문제 목록
             let rightBtn = document.getElementById("right"); //정답 확인 버튼
             let choice = new Array();
             let answer=null;
@@ -38,24 +35,18 @@
                     choice.push(words[choiceIndices[i]]); 
                 answer = means[choiceIndices[answerIndex]];
                 question.innerHTML = "｢"+answer+"｣의 의미는?";
-                for(let i=0;i<options.length;++i){
-                    options[i].innerHTML=choice[i];
-                    options[i].onclick=function(){
-                        checker(this);
-                    };
-                }
             }
             else{  //의미 문제
                 for(let i=0;i<choiceIndices.length;++i)
                     choice.push(means[choiceIndices[i]]);
                 answer = words[choiceIndices[answerIndex]];
                 question.innerHTML = "｢"+answer+"｣(이)라는 뜻의 단어는?";
-                for(let i=0;i<options.length;++i){
-                    options[i].innerHTML=choice[i];
-                    options[i].onclick=function(){
-                        checker(this);
-                    };
-                }
+            }
+            for(let i=0;i<options.length;++i){
+                options[i].innerHTML=choice[i];
+                options[i].onclick=function(){
+                    checker(this);
+                };
             }
             rightBtn.onclick=function(){
                 let num = getCheckedNum();
@@ -97,16 +88,21 @@
 
         //목록 체크
         function checker(option){ 
-            let op = option.style.color;
-            if(op!=""){ //체크 해제
-                option.style.color="";
-                checked=false;
+            let op_color = option.style.color;
+            if(checkedNode==null) //체크된 노드가 없으면
+            {
+                option.style.color="red"; //노드 체크
+                checkedNode=option; 
             }
-            else{ //체크
-                if(!checked){
-                    option.style.color="red";
-                    checked=true;
-                }
+            else if(checkedNode.style.color==op_color) //이미 체크된 노드 인 경우
+            {
+                option.style.color=""; //체크 해제
+                checkedNode=null; 
+            }
+            else{ //체크된 노드가 아닌 경우
+                checkedNode.style.color = ""; //체크된 노드 체크 해제
+                option.style.color="red"; //현재 노드 체크
+                checkedNode=option;
             }
         }
 
@@ -122,13 +118,11 @@
             return sel;
         }
 
+        //선택 사항 초기화
         function initQuiz(){
-            let option = document.getElementById("option");
-            let list = option.children;
-            for(let i=0;i<list.length;++i){
-                list[i].style.color="";
-            }
-            checked=false;
+            if(checkedNode!=null)
+                checkedNode.style.color="";
+            checkedNode=null;
         }
 
         //ramdom함수 교정
