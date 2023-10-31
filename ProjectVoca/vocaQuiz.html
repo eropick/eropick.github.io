@@ -34,13 +34,13 @@
                 for(let i=0;i<choiceIndices.length;++i)
                     choice.push(words[choiceIndices[i]]); 
                 answer = means[choiceIndices[answerIndex]];
-                question.innerHTML = "｢"+answer+"｣의 의미는?";
+                question.innerHTML = "｢"+answer+"｣(이)라는 뜻의 단어는?";
             }
             else{  //의미 문제
                 for(let i=0;i<choiceIndices.length;++i)
                     choice.push(means[choiceIndices[i]]);
                 answer = words[choiceIndices[answerIndex]];
-                question.innerHTML = "｢"+answer+"｣(이)라는 뜻의 단어는?";
+                question.innerHTML = "｢"+answer+"｣의 의미는?";
             }
             for(let i=0;i<options.length;++i){
                 options[i].innerHTML=choice[i];
