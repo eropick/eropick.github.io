@@ -43,6 +43,7 @@
         /*===================퀴즈 생성===================*/
         function openQuiz(){
             let words = localStorage.getItem("words");
+            words = JSON.parse(words);
             if(isEmptyList()||words.length<4) //퀴즈 유효성 검사
                 myAlert("퀴즈 최소 단어 수 : 4",2);
             else //만족하는 경우 생성
