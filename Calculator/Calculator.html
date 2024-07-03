@@ -51,6 +51,7 @@
                 //수식 결과창에 계산 값 반환
                 evalValue = eval(expValue)==undefined?"0":eval(expValue);
                 result.value = "="+evalValue; 
+                exp.value = evalValue;
             }
 
             function clearExp(){ //수식, 결과창 클리어
@@ -76,6 +77,7 @@
             /* 폼 간격 */ 
             fieldset{ 
                 width: 30%;
+                margin : 5vh auto;
                 text-align: center;
             }
             /* 폰트 크기 조절 */
@@ -102,7 +104,7 @@
                     수식 : <input type="text" id="exp" placeholder="ex)1+1">
                 </label><br>
                 <label>
-                    결과 : <input type="text" id="result" placeholder="=2">
+                    결과 : <input type="text" id="result">
                 </label>
                 <section class="row">
                     <input type="button" class="btn" value="+" onclick="inputExp(this)">
