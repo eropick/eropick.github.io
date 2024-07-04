@@ -1,4 +1,5 @@
 //자주 사용하는 수학 유틸 제작
+export {MathUtil};
 
 class MathUtil{
     //정수

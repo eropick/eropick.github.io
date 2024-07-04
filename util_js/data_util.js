@@ -1,4 +1,6 @@
 //사용자 정의 자료 구조
+export {UniqueArray};
+
 //자료값의 고유성을 유지하는 배열
 class UniqueArray{
     constructor(...data){
