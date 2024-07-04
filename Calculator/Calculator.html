@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>간단 계산기</title>
+        <script>
+            function replaceAll(str,oldStr,newStr){
+                //oldStr로 Split한 배열 반환
+                let result = new String(str).split(oldStr);
+                //나눠진 배열을 바꿀 문자열로 연결
+                return result.join(newStr); 
+            }
+            function inputExp(btn){
+                //수식 가져오기
+                let exp = document.getElementById("exp");
+                let expValue = new String(exp.value); 
+                let changeStr=""; //수식 변경용
+                if(isOperator(btn.value)){ //연산자인 경우
+                    //결과 값 초기화
+                    clearExp();
+                    //마지막 값에 연산자가 있다면 연산자 변경
+                    if(expValue!=""&&isOperator(expValue.charAt(expValue.length-1))){
+                        console.log(expValue.charAt(expValue.length-1));   
+                        changeStr = expValue.substr(0,expValue.length-1).concat(btn.value);
+                    }
+                    else if(expValue=="") //아무것도 없는 경우 앞에 0을 추가
+                        changeStr = expValue.concat("0"+btn.value);
+                    else  //그 외에는 이어붙이기
+                        changeStr = expValue.concat(btn.value);
+                }
+                else{ //숫자인 경우
+                    let result = document.getElementById("result");
+                    //결과 값이 있는 경우 초기화 후 다시 계산
+                    if(result.value!=""){
+                        clearExp(); //초기화 
+                        expValue=""; //저장된 수식의 초기화
+                    }
+                    changeStr = expValue.concat(btn.value)
+                }
+                //결과 반영
+                exp.value=changeStr;
+            }
+
+            function calculateExp(){
+                //연산해서 결과창으로 반환
+                let exp = document.getElementById("exp");
+                let result = document.getElementById("result");
+                //곱셈, 나눗셈 기호 치환
+                let expValue = replaceAll(exp.value,"÷","/");
+                expValue = replaceAll(expValue,"x","*");                
+                //수식 결과창에 계산 값 반환
+                evalValue = eval(expValue)==undefined?"0":eval(expValue);
+                result.value = "="+evalValue; 
+                exp.value = evalValue;
+            }
+
+            function clearExp(){ //수식, 결과창 클리어
+                let exp = document.getElementById("exp");
+                let result = document.getElementById("result");
+                exp.value="";
+                result.value="";
+            }
+            
+            function isOperator(val){ //연산자인지 확인
+                if(val=="+"||val=="-"||val=="x"||val=="÷")
+                    return true;
+                else
+                    return false;
+            }
+        </script>
+        <style>
+            body{
+                margin : 0%;
+                padding : 0%;
+                line-height: 35px;
+            }
+            /* 폼 간격 */ 
+            fieldset{ 
+                width: 30%;
+                margin : 5vh auto;
+                text-align: center;
+            }
+            /* 폰트 크기 조절 */
+            label,label>input{ font-size: large; }
+            /* 수식, 결과창 레이아웃 */
+            label>input{
+                border-radius: 5px; width : 70%;
+            }
+            /* 줄 당 버튼 간격 */
+            .row{ margin : 10px; }
+            /* 버튼 크기 */
+            .btn{
+                width: 20%;
+                height : 50px;
+                font-size: large;
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <fieldset>
+                <legend><span style="font-size: large;">계산기</span></legend>
+                <label>
+                    수식 : <input type="text" id="exp" placeholder="ex)1+1">
+                </label><br>
+                <label>
+                    결과 : <input type="text" id="result">
+                </label>
+                <section class="row">
+                    <input type="button" class="btn" value="+" onclick="inputExp(this)">
+                    <input type="button" class="btn" value="C" onclick="clearExp()">
+                    <input type="button" class="btn" value="0" onclick="inputExp(this)">
+                    <input type="button" class="btn" value="=" onclick="calculateExp()">
+                </section>
+                <section class="row">
+                    <input type="button" class="btn" value="-" onclick="inputExp(this)">
+                    <input type="button" class="btn" value="1" onclick="inputExp(this)">
+                    <input type="button" class="btn" value="2" onclick="inputExp(this)">
+                    <input type="button" class="btn" value="3" onclick="inputExp(this)">
+                </section>
+                <section class="row">
+                    <input type="button" class="btn" value="x" onclick="inputExp(this)">
+                    <input type="button" class="btn" value="4" onclick="inputExp(this)">
+                    <input type="button" class="btn" value="5" onclick="inputExp(this)">
+                    <input type="button" class="btn" value="6" onclick="inputExp(this)">
+                </section>
+                <section class="row">
+                    <input type="button" class="btn" value="÷" onclick="inputExp(this)">
+                    <input type="button" class="btn" value="7" onclick="inputExp(this)">
+                    <input type="button" class="btn" value="8" onclick="inputExp(this)">
+                    <input type="button" class="btn" value="9" onclick="inputExp(this)">
+                </section>
+            </fieldset>
+        </form>
+    </body>
+</html>

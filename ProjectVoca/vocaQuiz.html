@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vocaQuiz</title>
+    <script>
+        window.onload=newQuiz;
+        var checkedNode=null;
+        var timerID = null;
+
+        //새 퀴즈 생성합
+        function newQuiz(){
+            let w = localStorage.getItem("words");
+            let m = localStorage.getItem("means");
+            words = JSON.parse(w);
+            means = JSON.parse(m);
+            //이전 퀴즈 초기화
+            initQuiz();
+            //퀴즈 변경
+            changeQuiz(words,means);
+        }
+        
+        function changeQuiz(words,means){
+            let quizType = myIntRandom(0,1); //단어문제 or 의미문제 
+            let choiceIndices = getRandomChoice(4,words.length);
+            let answerIndex = myIntRandom(0,3); //문제낼 인덱스 번호 추출
+            let question = document.getElementById("question");
+            let options = document.getElementsByTagName("li"); //문제 목록
+            let rightBtn = document.getElementById("right"); //정답 확인 버튼
+            let choice = new Array();
+            let answer=null;
+            if(quizType==0){ //단어 문제
+                for(let i=0;i<choiceIndices.length;++i)
+                    choice.push(words[choiceIndices[i]]); 
+                answer = means[choiceIndices[answerIndex]];
+                question.innerHTML = "｢"+answer+"｣(이)라는 뜻의 단어는?";
+            }
+            else{  //의미 문제
+                for(let i=0;i<choiceIndices.length;++i)
+                    choice.push(means[choiceIndices[i]]);
+                answer = words[choiceIndices[answerIndex]];
+                question.innerHTML = "｢"+answer+"｣의 의미는?";
+            }
+            for(let i=0;i<options.length;++i){
+                options[i].innerHTML=choice[i];
+                options[i].onclick=function(){
+                    checker(this);
+                };
+            }
+            rightBtn.onclick=function(){
+                let num = getCheckedNum();
+                if(num == answerIndex)
+                    myMessage("정답",1,true);
+                else
+                    myMessage("오답"+"(답은 "+(answerIndex+1)+"번)",1,false);
+            }
+        }
+        //메시지 처리
+        function myMessage(msg,sec,correct){
+            if(timerID == null){
+                let warning = document.getElementById("warning");
+                warning.innerHTML = msg;
+                warning.hidden=false;
+                if(correct)
+                    warning.style.color="blue";
+                else
+                    warning.style.color="red";
+                timerID=setTimeout(function(){
+                    warning.hidden=true;
+                    timerID=null;
+                },1000*sec); 
+            }
+        }
+
+        //체크된 번호 반환
+        function getCheckedNum(){
+            let options = document.getElementsByTagName("li");
+            let num=-1;
+            for(let i=0;i<options.length;++i){
+                if(options[i].style.color=="red"){
+                    num=i;
+                    break;
+                }
+            }
+            return num;
+        }
+
+        //목록 체크
+        function checker(option){ 
+            let op_color = option.style.color;
+            if(checkedNode==null) //체크된 노드가 없으면
+            {
+                option.style.color="red"; //노드 체크
+                checkedNode=option; 
+            }
+            else if(checkedNode.style.color==op_color) //이미 체크된 노드 인 경우
+            {
+                option.style.color=""; //체크 해제
+                checkedNode=null; 
+            }
+            else{ //체크된 노드가 아닌 경우
+                checkedNode.style.color = ""; //체크된 노드 체크 해제
+                option.style.color="red"; //현재 노드 체크
+                checkedNode=option;
+            }
+        }
+
+        //랜덤 선택지, n개 중 r개 선택
+        function getRandomChoice(r,n){
+            let sel = new Array();
+            while(sel.length<r){ //문제지 r개 추출
+                let rd = myIntRandom(0,n-1);
+                let condition = sel.findIndex(function(word){return word==rd});
+                if(condition==-1) //값이 없는 경우만 할당
+                    sel.push(rd);
+            }
+            return sel;
+        }
+
+        //선택 사항 초기화
+        function initQuiz(){
+            if(checkedNode!=null)
+                checkedNode.style.color="";
+            checkedNode=null;
+        }
+
+        //ramdom함수 교정
+        function myIntRandom(min,max){
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random()*(max-min+1)+min);
+        }
+
+    </script>
+    <style>
+        body{ font-size: 30px;}   
+        ol>li:hover{ font-size: 120%; cursor: grab; }
+        #right,#newQuiz{ margin-top:5px; font-size: 15px;
+            width:200px; height:40px; }
+        #warning{ margin-left: 10px; }
+    </style>
+</head>
+<body>
+    <h3 id="question">문제 제목</h3>
+    <ol id="option">
+        <li>의미1</li>
+        <li>의미2</li>
+        <li>의미3</li>
+        <li>의미4</li>
+    </ol>
+    <input type="button" id="newQuiz" value="새 문제" onclick="newQuiz()">
+    <input type="button" id="right" value="정답 확인"><label id="warning"></label>
+</body>
+</html>
