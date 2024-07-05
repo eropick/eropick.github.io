@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./elevator.js"></script>
+    <script src="./elevator_ui.js"></script>
+    <style>
+        *{box-sizing: border-box;}
+        html,body{margin :0; border:0;padding:0;}
+        main{
+            width : 98%;
+            border : 1px solid black;
+            margin : 2px auto;
+        }
+        #elevator{
+            display : inline-block;
+            width : 59%;
+            min-height : 100vh;
+            background-color: aqua;
+        }
+        #floors{
+            width : 39%;
+            min-height : 100vh;
+            background-color: aquamarine;
+        }
+
+        /* 엘베 버튼 UI 변동 */
+        .ebtn{
+            font-size: 20px;
+            border-radius: 100%;
+            border : 2px solid blue;
+        }
+        .ebtn.select{ /* 토글 */
+            border : 2px solid #3bd93b;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section id="elevator">
+
+        </section>
+        <section id="floors">
+
+        </section>
+    </main>
+    <!--
+    <button>시작</button>
+    <div>
+        <button class="ebtn">1</button>
+        <button class="ebtn">2</button>
+        <button class="ebtn">3</button>
+    </div>
+    -->
+</body>
+</html>
