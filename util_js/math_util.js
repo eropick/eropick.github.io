@@ -18,4 +18,15 @@ class MathUtil{
         let random = (Math.Floor(Math.pow((Math.random()*(_max+1-_min)))*digit)/digit)+_min;
         return random;
     }
+
+    //degree to radian
+    static deg2rad(degree){
+        return (degree*Math.PI)/180;
+    }
+
+    //radian to degree
+    static rad2deg(radian){
+        return (radian*180)/Math.PI
+    }
+
 }
