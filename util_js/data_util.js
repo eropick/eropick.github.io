@@ -23,36 +23,6 @@ class Vector2D{
             this.mapCoordLB2Canvas(canvas);
         }
     }
-    
-    //left_bottom origin to canvas
-    mapCoordLB2Canvas(canvas){ 
-        if(this.coordinate =="LeftBottom origin"&&typeof canvas == "object"){
-            let height = canvas.height;
-            this.y = height - this.y;
-            this.coordinate = "Canvas origin";
-        }
-    }//change origin LeftBottom to Canvas
-
-    //canvas to left_bottom origin
-    mapCoordCanvas2LB(canvas){
-        if(this.coordinate=="Canvas origin"&&typeof canvas == "object"){
-            let height = canvas.height;
-            this.y = (this.y - height)*-1;
-            this.coordinate = "LeftBottom origin";
-        }
-    }//change origin Canvas to LeftBottom
-
-    static mapCoordLB2CanvasAll(canvas,...vecs){
-        vecs.forEach((vector)=>{
-            vector.mapCoordLB2Canvas(canvas);
-        });
-    } //여러 벡터를 한 번에 좌표계 변경
-
-    static mapCoordCanvas2LBAll(canvas,...vecs){
-        vecs.forEach((vector)=>{
-            vector.mapCoordCanvas2LB(canvas);
-        });
-    } //여러 벡터를 한 번에 좌표계 변경
 
     errMsg(error){ 
         console.error("[Error] : "+error);
@@ -145,7 +115,7 @@ class Vector2D{
 
     normalize(){ //단위 벡터
         let mag = this.mag();
-        return this.mul(1/mag);
+        return (mag==0)?this.copy():this.mul(1/mag).copy();
     }//return Vector2D
 
     angle(){ 

@@ -1,3 +1,5 @@
+export {Floor, Button, ElevatorButtons, Elevator,ElevatorSystem }
+
 class Floor{ //각 층
     constructor(num){
         this.number = num;
@@ -19,6 +21,10 @@ class Button{
         this.id=id;
         this.isSelected=false;
         this.isActivated=true;
+        this.selectEvent=null;
+    }
+    setSelectEvent(){
+        
     }
     select(){ //toggle Button
         this.isSelected=this.isSelected?false:true;
@@ -38,6 +44,8 @@ class ElevatorButtons{
         this.underFloorBtns = []; //지하층 버튼
         this.maxGroundFloor = groundF; //지상층 최대
         this.maxUnderFloor = underF; //지하층 최대
+        this.openBtn = new Button("open"); //열기버튼
+        this.closeBtn = new Button("close"); //닫기버튼
         this.initButton(); //버튼 생성
     }
     initButton(){
@@ -110,7 +118,10 @@ class Elevator{ //문열기, 문닫기, 층수 카운팅
         this.Buttons = new ElevatorButtons(groundFloor,underFloor); //버튼
         this.currentFloor = 1; //현재 층 수
         /* ... -4 -3 -2 -1 1 2 3 4 ... */
+        this.state = Elevator.states["stop"]; //엘리베이터 상태
     }
+
+    static states = {stop : "-", up : "↑", down : "↓"};
 
     getId(){ return this.id; }
 
@@ -154,7 +165,6 @@ class ElevatorSystem{
             return Floors;
         })();
         this.elevator = new Elevator(1,groundFloors,underFloors); //엘리베이터
-        
         this.isActivated = false;
     }
     
@@ -189,28 +199,3 @@ class ElevatorSystem{
         console.log("중단!");
     }
 }
-
-var elevatorSystem = null;
-function simulate(groundFloor,underFloor){
-    elevatorSystem = new ElevatorSystem(groundFloor,underFloor);
-    //시스템 동작 버튼
-    const button = document.querySelector("button");
-    button.addEventListener("click",()=>{ 
-        //버튼 토글
-        if(elevatorSystem.isActivated){
-            elevatorSystem.stop();
-            button.innerText="시작";
-        }
-        else{
-            elevatorSystem.run();
-            button.innerText="중단";
-        }
-    });
-    
-    //컨트롤할 버튼
-    const eBtns = elevatorSystem.elevator.Buttons;
-    //--> GUI 버튼과 연동
-}
-window.addEventListener("load",()=>{
-    simulate(5,4);
-});

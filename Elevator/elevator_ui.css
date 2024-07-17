@@ -30,7 +30,6 @@ main{
     float : left;
     width : 60%; height : 100%;
     border: 1px solid black;
-    background-color: aqua;
 }
 
 #elevator .eboard{
@@ -62,20 +61,20 @@ main{
 }
 
 /* 문 설계 */
-#elevator .door{
+.door{
     float:left;
     width : 80%; height : 90%; 
     background-color: #333;
 }
 
-#elevator .door .door_left{
+.door_left{
     float : left;
     width : 50%; height : 100%;
     border:1px solid black;
     background-color: #888;
 }
 
-#elevator .door .door_right{
+.door_right{
     float : right; 
     width : 50%; height : 100%;
     border:1px solid black;
@@ -87,21 +86,65 @@ main{
     float : right;
     width : 20%; height : 100%;
     background-color: #555;
+    padding-top : 80px;
+    text-align: center;
 }
 
-#Layers{
-    float : right;
-    width : 40%; height : 100%;
-    border: 1px solid black;
-    background-color: aquamarine;
+#elevator .buttons .floor{
+    width : 100%; text-align: center;
+    padding-top : 20px;
 }
 
-.ebtn{
-    font-size: 20px;
-    margin : 5px;
+#elevator .buttons .open_close{
+    width : 80%; display: inline-block;
+    text-align: center;
+    padding-top : 30px;
+}
+
+.open, .close{
+    font-size : 8px;
+    display : inline-block;
+    width : 30px; height : 30px;
+    margin : 3px;
     border-radius: 50px;
     border : 2px solid blue;
 }
-.ebtn.select{
+
+#layers{
+    display: grid; align-items: center;
+    grid-template-columns: auto auto auto;
+    background-color: #2196F3;
+    padding: 10px;
+    float : right;
+    width : 40%; height : 100%;
+    border: 1px solid black;
+    background-color: beige;
+}
+
+.ebtn{
+    display : inline-block;
+    width : 30px; height : 30px;
+    margin : 3px;
+    border-radius: 50px;
+    border : 2px solid blue;
+}
+.select{
     border : 2px solid #3bd93b;
+}
+
+.layer{
+    width : 70%;
+    margin : 0 auto;
+    border: 1px solid black;
+    background-color: #555;
+}
+
+.layer p{
+    margin : 0;
+    text-align : center;
+}
+
+.up,.down{
+    display: block;
+    margin : 5px auto;
 }
