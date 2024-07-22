@@ -13,21 +13,40 @@
         integrity='sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz' crossorigin='anonymous'></script>
     </head>
     <body>
-        <div id="wrap">
-            <aside>
-                사이드바
+        <div class="container-sm" id="wrap">
+            <aside class="sidebar">
+                <!--테이블로 영역 분할-->
+                <div class="row" id="side_header">
+                    <div class="col-sm-10" id="profile">
+                        profile이 표기될 곳
+                    </div> 
+                    <div class="col-sm-2 btn_area"></div>
+                </div>
+                <div class="row" id="side_body">
+                    <div class="col-sm-10" id="category">
+                        카테고리가 표기될 곳
+                    </div> 
+                    <div class="col-sm-2 btn_area">
+                        <button type="button" class="btn bg-white btn-outline-none">&rang;</button>
+                    </div>
+                    <!--&lang;-->
+                </div>
             </aside>
-            <main>
-                메인 영역
+            <main class="container-sm">
+                <div class="test">
+                    메인 영역
+                </div>
+                <div class="test">
+                    메인 영역
+                </div>
             </main>
         </div>
     </body>
     <script src="./index.js"></script>
 </html>
 
-<!--
-추가할 내용
-<nav>
+<!-- JS 파일
+<nav id="test">
     <ul>
         <li><a href="./util_js/util_test.html" target="_blank">유틸테스트</a></li>
         <li><a href="./ES5식_Class구현/class.html" target="_blank">ES5식 클래스 설계</a></li>
