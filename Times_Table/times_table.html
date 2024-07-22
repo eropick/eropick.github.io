@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <!--promise,setTimeout,Callback를 활용한 흐름 제어-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>구구단</title>
+        <script>
+            var loop=true;
+            function gugudan(){ //구구단 
+                return new Promise((resolve,reject)=>{
+                    const timesTable = document.getElementById("dan");
+                    const br = document.createElement("br");
+                    const hr = document.createElement("hr");          
+                    while(timesTable.firstChild){ //이전 작업 삭제
+                        timesTable.firstChild.remove();
+                    }
+                    let n=prompt("몇 단을 입력할까요?","1");     
+                    if(isFinite(n)){
+                        n = parseInt(n);
+                        const ndan = document.createElement("p");
+                        ndan.innerText=n+"단";
+                        timesTable.appendChild(ndan);
+                        for(let i=1;i<=9;++i){
+                            let content=document.createElement("p");
+                            content.innerText = n+" x "+i+" = "+n*i;
+                            timesTable.appendChild(content);
+                            timesTable.appendChild(br);
+                        }
+                        timesTable.appendChild(hr);
+                        setTimeout(()=>{
+                            resolve(confirm);
+                        },1000);
+                    }
+                    else{
+                        let content=document.createElement("p");
+                        content.innerText="-입력 오류 중단-"
+                        timesTable.appendChild(content);
+                        reject("error : invalid error");
+                    }
+                });
+            }
+            async function run(){
+                do{
+                    await gugudan().then(question=>{
+                        let check=question("그만할까요?");
+                        if(check)
+                            loop=false;
+                    }).catch(error=>{
+                        loop=false;
+                        console.log(error);
+                    });
+                }while(loop);
+            }
+        </script>
+        <style>
+            main{ 
+                width : 40%;
+                border: 1px solid black;
+                margin : 20px auto;
+                border-radius: 5px;
+            }
+            header{
+                border-bottom: 3px solid black;
+                text-align:center;
+            }
+            section{
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <header><h1>구구단</h1></header>
+            <section id="dan">
+                <!--times_table-->
+            </section>
+        </main>
+        <script>
+            window.onload=run;
+        </script>
+    </body>
+</html>

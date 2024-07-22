@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star</title>
+    <script src="./star_circle.js"></script>   
+    <style>
+        body{ margin : 0; padding :0; border: 0; }
+        #container{ 
+            margin : 1px auto; 
+            border:1px solid black; 
+            border-radius: 2px; 
+        }
+        div{ text-align: center; }
+        p{  display:inline; }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <!--stars-->
+    </div>
+    <script>
+        window.addEventListener("load",()=>{
+            let radius=parseInt(prompt("반지름?",3));
+            drawCircle(radius);
+        });
+    </script>
+</body>
+</html>

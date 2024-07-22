@@ -1,0 +1,150 @@
+*{box-sizing: border-box;}
+
+/* 시작버튼 */
+header{
+    width : 1000px; height : 50px;
+    text-align: center; float : both;
+    margin : 3px auto;
+}
+
+header button{
+    background-color: #222;
+    color : white;
+    font-size: 1.2rem;
+    box-shadow: 1px 1px 2px grey;
+}
+
+header button:hover{
+    background-color: #555;
+}
+
+/* 시뮬레이터 레이아웃 */
+main{
+    width : 1000px; height : 550px;
+    margin : 5px auto;
+    border : 1px solid black;
+}
+
+/* 엘리베이터 */
+#elevator{
+    float : left;
+    width : 60%; height : 100%;
+    border: 1px solid black;
+}
+
+#elevator .eboard{
+    float : left;
+    width : 80%; height : 10%; 
+    background-color: black;
+    font-weight: bold; color : red; 
+    text-align: center;
+}
+
+#elevator .eboard p{
+    height : 100%;
+    margin : 0; padding : 0 5px;
+    line-height : 55px;
+}
+
+/* 층 수 */
+#elevator .eboard p:nth-of-type(1){
+    float : left; width : 53%;  
+    font-size : 1.5rem;
+    text-align: end;
+}
+
+/* 올라가는지 여부 */
+#elevator .eboard p:nth-of-type(2){
+    float : right; width : 40%;
+    font-size : 1.3rem;
+    text-align:start;
+}
+
+/* 문 설계 */
+.door{
+    float:left;
+    width : 80%; height : 90%; 
+    background-color: #333;
+}
+
+.door_left{
+    float : left;
+    width : 50%; height : 100%;
+    border:1px solid black;
+    background-color: #888;
+}
+
+.door_right{
+    float : right; 
+    width : 50%; height : 100%;
+    border:1px solid black;
+    background-color: #888;
+}
+
+/* 엘리베이터 버튼 */
+#elevator .buttons{
+    float : right;
+    width : 20%; height : 100%;
+    background-color: #555;
+    padding-top : 80px;
+    text-align: center;
+}
+
+#elevator .buttons .floor{
+    width : 100%; text-align: center;
+    padding-top : 20px;
+}
+
+#elevator .buttons .open_close{
+    width : 80%; display: inline-block;
+    text-align: center;
+    padding-top : 30px;
+}
+
+.open, .close{
+    font-size : 8px;
+    display : inline-block;
+    width : 30px; height : 30px;
+    margin : 3px;
+    border-radius: 50px;
+    border : 2px solid blue;
+}
+
+#layers{
+    display: grid; align-items: center;
+    grid-template-columns: auto auto auto;
+    background-color: #2196F3;
+    padding: 10px;
+    float : right;
+    width : 40%; height : 100%;
+    border: 1px solid black;
+    background-color: beige;
+}
+
+.ebtn{
+    display : inline-block;
+    width : 30px; height : 30px;
+    margin : 3px;
+    border-radius: 50px;
+    border : 2px solid blue;
+}
+.select{
+    border : 2px solid #3bd93b;
+}
+
+.layer{
+    width : 70%;
+    margin : 0 auto;
+    border: 1px solid black;
+    background-color: #555;
+}
+
+.layer p{
+    margin : 0;
+    text-align : center;
+}
+
+.up,.down{
+    display: block;
+    margin : 5px auto;
+}

@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.canvas{
+    width : 540px;
+    height : 530px;
+    background: rgba(255, 115, 0, 0.156);
+    border-radius: 20px;
+    display: block;
+    margin: 10px auto;
+}
+.wall {
+    box-sizing: content-box; 
+    border: 2px solid #000; /* 검정색 테두리 */
+    width: 420px;
+    height: 500px;
+    /* position: relative;*/
+    margin: 10px auto;
+    background-color: #f8f9fa;
+}
