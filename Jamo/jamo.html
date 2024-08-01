@@ -5,15 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="short icon" href="#">
     <title>자모 분리 결합 구현</title>
-    <link rel="">
+    <style>
+        *{ margin :0; padding : 0; box-sizing: border-box; }
+        main{
+            width : 60%;
+            margin : 10px auto;
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
+        textarea{
+            width : 100%; height : 80px; resize : none; 
+        }
+        button[type="button"]{
+            width : 100%; height : 30px;    
+            margin : 5px;
+        }
+        p{
+            width : 100%; height : 150px;
+            text-align: center;
+            overflow-y: scroll;
+        }
+    </style>
 </head>
 <body>
     <main>
-        <input type="text" id="input_data">
+        <textarea id="input_data"></textarea>
         <button type="button" id="separ">자모 분리</button>
         <button type="button" id="concat">자모 결합</button>
         <button type="button" id="jamo_eng">영문으로 변환</button>
         <button type="button" id="eng_jamo">한글로 변환 </button>
+        <p><!--결과--></p>
     </main>
     
     <script type="module" src="./jamo_test.js"></script>
