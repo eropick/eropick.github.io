@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공공 데이터 Open API 데이터 가져오기</title>
+    <style>
+        *{ box-sizing: border-box; }
+        main{
+            width : 70%; margin : 10px auto;
+            text-align: center; overflow-y: hidden;
+        }
+        p{
+            padding-top : 50px;
+            background-color: antiquewhite;
+            height : 400px; overflow-y: scroll;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <p>출력될 영역</p>
+        <button type="button" id="getBtn" onclick="getData()">데이터 가져오기</button>
+    </main>
+    <script src="./openapi.js"></script>
+</body>
+</html>
