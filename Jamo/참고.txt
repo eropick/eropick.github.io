@@ -41,16 +41,6 @@
     $ : 종료
     /^정규식$/g : 패턴 비교식 - 일치하는 모든 부분
 
-    -정규표현식 연산자
-    https://velog.io/@k_jihye92/%EC%A0%95%EA%B7%9C%ED%91%9C%ED%98%84%EC%8B%9DRegExp-with-JS
-
-    #정규식 테스트 사이트
-    https://regexr.com/
-    
-    #참고
-    https://hitomis.tistory.com/68
-    https://velog.io/@jetom/No-16.-%EC%A0%95%EA%B7%9C%ED%91%9C%ED%98%84%EC%8B%9Dg
-
     //리터럴 방식 let re = "/^[0-9ㄱ-ㅎ가-힣 ]*$/g"; 
     //클래스 생성자 방식
     let re = "^[0-9ㄱ-ㅎ가-힣 ]*$";
