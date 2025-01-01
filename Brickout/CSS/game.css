@@ -6,6 +6,10 @@
     text-align: center;
 }
 
+.bgimg{
+    background-image: url('../images/BlockBG.jpg');
+}
+
 body {
     background-color: #e2dede;
     background-image: url('../Images/BlockBG.jpg');
