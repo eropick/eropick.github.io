@@ -49,7 +49,7 @@
 - **Collaboration**
     - Notion : 템플릿을 활용하여 협업 문서 작성 경험 
 
-## Project
+## Key Project
 
 ### Helpme! 도우미 매칭 시스템
 
@@ -85,3 +85,7 @@
 - **[개요]**
     - sa
     - ss
+
+## Solo Project
+개인적인 호기심으로 진행한 프로젝트
+
