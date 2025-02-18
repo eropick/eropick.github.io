@@ -1,9 +1,6 @@
 ## 👤Profile
-<kbd>
-    <img src="./images/profile/profile_photo.jpg" width=130 height=130 alt="profileImg">
-</kbd>
 
-**김 규 택**
+<img src="./images/profile/profile_photo.jpg" width=130 height=140 alt="김규택">
 
 2024 국립공주대학교 KDT 수료생
 
