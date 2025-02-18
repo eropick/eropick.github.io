@@ -1,11 +1,9 @@
 ## 👤Profile
+<kbd>
+    <img src="./images/profile/profile_photo.jpg" width=130 height=130 alt="profileImg">
+</kbd>
 
-<header style="padding-left:10px;  width:130px;">
-    <img src="./images/profile/profile_photo.jpg" 
-    style="width:130px; height:130px;  border-radius:50%; object-fit:cover;
-    border:1px solid #000; box-shadow:0 2px 2px rgba(0,0,0,0.5)" alt="profileImg">
-    <p style="text-align:center; font-weight:bold">김 규 택</p>
-</header>
+**김 규 택**
 
 2024 국립공주대학교 KDT 수료생
 
