@@ -5,7 +5,7 @@
 2024 국립공주대학교 KDT 수료생
 
 - **Contact**
-    - E-mail : [kt092805@gmail.com](mailto:kt092805@gmail.com?subject=문의&body=내용을 입력해주세요)
+    - E-mail : <a href="mailto:kt092805@gmail.com?subject=문의&body=내용을 입력해주세요">kt092805@gmail.com</a>
 
 - **Github** 
     - Link : [https://github.com/eropick](https://github.com/eropick)
@@ -35,7 +35,7 @@
     - C# : 닷넷 Windows Form을 활용한 GUI 프로그래밍(공학용 계산기 제작) 경험
 - **Interpreter & Script Language**
     - Python : 기본 문법과 Django 웹 프레임워크를 활용한 실시간 편집 사이트 제작 경험
-    - JavaScript : 웹 애플리케이션의 이벤트 처리 함수 작성 및 fetch한 JSON 데이터 처리 경험
+    - JavaScript : 웹 애플리케이션의 이벤트 처리 함수 작성 및 fetch JSON 데이터 처리
 - **Front-end**
     - Web Design
         - HTML/CSS : HTML과 CSS를 활용한 웹 구조 디자인 경험
@@ -51,18 +51,37 @@
 
 ## Project
 
-### 3차 프로젝트
+### Helpme! 도우미 매칭 시스템
 
-**프로젝트 개요**
+**[진행 기간]**
+    '25.01.17 - '25.02.13, 개발인원 4명 
+
+**[개요]** 
+- ㄴㅁㄴㅁㄴ
+- ㅁㄴㅁㄴㅇㅁㄴ
+- ㅁㄴㅇㅁㄴㅇㅁㄴㅇ
+ 
+**[역할] : Full-Stack**
+- DB구조 설계, 협업체계(Git) 관리  
+- 회원기능, 관광지 정보, 포토리뷰, 여행계획 구현
+- 화면구현 및 Axios 비동기 통신 구현
+
+**[시연]** : [Helpme 시연 영상](https://www.youtube.com/watch?v=UELlz0jtkVM&list=PLeIymhSKOH64BZ1DfBw_5RibDxAHDUvmo&index=2)
 
 ### 캡스톤 프로젝트
 
-**프로젝트 개요**
+- **[개요]**
+    - sa
+    - ss
 
 ### 2차 프로젝트
 
-**프로젝트 개요**
+- **[개요]**
+    - sa
+    - ss
 
 ### 1차 프로젝트
 
-**프로젝트 개요**
+- **[개요]**
+    - sa
+    - ss
