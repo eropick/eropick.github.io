@@ -85,6 +85,8 @@
 
 **[시연]**  [Helpme 시연 영상](https://www.youtube.com/watch?v=UELlz0jtkVM&list=PLeIymhSKOH64BZ1DfBw_5RibDxAHDUvmo&index=2)
 
+---
+
 ### 캡스톤 프로젝트
 
 - **[개요]**
