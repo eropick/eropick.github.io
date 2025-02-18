@@ -31,8 +31,8 @@
         - Servlet 또는 Spring MVC 패턴을 활용한 REST API 작성 가능
         - TCP 소켓 프로그래밍을 통한 TCP 서버 구현 경험
     - <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Dart_programming_language_logo.svg/768px-Dart_programming_language_logo.svg.png" width="30" height="10" alt="Dart"> : Flutter에서 사용하는 Dart 언어를 사용한 안드로이드 앱 개발 경험
-    - <img src="https://simpleicons.org/icons/c.svg" width="20" height="10" alt="C"> : Windows API를 활용한 GUI 프로그래밍(자료구조 시각화 제작) 경험
-    - <img src="https://simpleicons.org/icons/cplusplus.svg" width="20" height="10" alt="C++"> : SFML 라이브러리를 활용한 토이 프로젝트(당구 게임 제작) 경험
+    - C : Windows API를 활용한 GUI 프로그래밍(자료구조 시각화 제작) 경험
+    - C++ : SFML 라이브러리를 활용한 토이 프로젝트(당구 게임 제작) 경험
     - <img src="https://cdn.prod.website-files.com/6047a9e35e5dc54ac86ddd90/63065002cd563e1cd1cead28_eaadfe64.png" width="15" height="15" alt="C#"> : 닷넷 Windows Form을 활용한 GUI 프로그래밍(공학용 계산기 제작) 경험
 - **Interpreter & Script Language**
 
