@@ -53,18 +53,23 @@
 
 ### Helpme! 도우미 매칭 시스템
 
-**[진행 기간]**
-    '25.01.17 - '25.02.13, 개발인원 4명 
+**[진행 기간]** 
+- '25.01.17 - '25.02.13, 개발인원 4명
 
 **[개요]** 
-- ㄴㅁㄴㅁㄴ
-- ㅁㄴㅁㄴㅇㅁㄴ
-- ㅁㄴㅇㅁㄴㅇㅁㄴㅇ
+- 우리들은 일상에서 혼자 해결할 수 없는 어려움들이 종종 존재한다
+- 자신의 주변의 사람들에게 의뢰하고 주변인들은 이를 해결해주며 수익을 창출
+- 접근성이 좋은 모바일 애플리케이션 개발
  
 **[역할] : Full-Stack**
-- DB구조 설계, 협업체계(Git) 관리  
-- 회원기능, 관광지 정보, 포토리뷰, 여행계획 구현
-- 화면구현 및 Axios 비동기 통신 구현
+- Front
+    - sa
+- Back
+    - db
+
+**[프로젝트 구조]**
+- [Flutter Directory](https://github.com/eropick/eropick.github.io/blob/main/kdt_project/3%EC%B0%A8%20%EC%9C%84%EC%B9%98%20%EA%B8%B0%EB%B0%98%20%EB%8F%84%EC%9A%B0%EB%AF%B8%20%EB%A7%A4%EC%B9%AD%20%EC%8B%9C%EC%8A%A4%ED%85%9C(Helpme)/flutter_project_directory.md)
+- [Spring Directory](https://github.com/eropick/eropick.github.io/blob/main/kdt_project/3%EC%B0%A8%20%EC%9C%84%EC%B9%98%20%EA%B8%B0%EB%B0%98%20%EB%8F%84%EC%9A%B0%EB%AF%B8%20%EB%A7%A4%EC%B9%AD%20%EC%8B%9C%EC%8A%A4%ED%85%9C(Helpme)/spring_project_directory.md)
 
 **[시연]** : [Helpme 시연 영상](https://www.youtube.com/watch?v=UELlz0jtkVM&list=PLeIymhSKOH64BZ1DfBw_5RibDxAHDUvmo&index=2)
 

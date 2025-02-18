@@ -1,0 +1,96 @@
+/* 초기설정 */
+
+*{
+    box-sizing: border-box;
+    margin : 0; padding : 0; border : 0; 
+}
+
+#wrap{
+    margin : 0;
+    width : 100%;
+    min-height : 100vh;
+    max-height : 3000px;
+    height : auto;
+    background-color: aqua;
+}
+
+/*************** 메인 영역 ***************/
+main{
+    margin : 0 20%;
+    width : 100%; 
+    height : 100%; /* 자식 요소에 맞게 늘림*/
+    border-radius: 5px;
+    background-color: bisque;   
+    text-align: center;
+}
+
+.test{
+    width : 100%; height : 500px;
+    background-color:blueviolet;
+}
+
+/*************** 사이드바 ***************/
+.sidebar{ 
+    width : 300px; height : 100%;
+    position : fixed; /* 스크롤 시 고정 */
+    z-index: 10; left : 0;
+    border : 0.5px solid #aaa;
+    border-radius: 10px;
+    background-color:antiquewhite;
+}
+
+.sidebar_toggle{
+    --side-hidden : 0;
+}
+
+#side_header{
+    width : 95%; height : 30%;
+    margin : 0 auto;
+    margin-top : 10px;
+}
+/* 프로필 */
+#profile{
+    background-color:aliceblue;
+}
+
+#side_body{
+    width : 95%; height : 70%;
+    margin : 0 auto;
+    margin-bottom: 10px;
+}
+/* 카테고리 */
+#category{
+    background-color: plum;
+}
+
+/* 버튼 */
+.btn_area{
+    position : relative;
+}
+.sidebar button[type="button"]{
+    position : absolute; 
+    background-color: white;
+    left : 25%; top : 20%;
+    font-size: 1.2rem;
+}
+
+/*  반응형 구성  */
+/* 사이드바 */
+/* 메인 영역 */
+@media (max-width: 576px){
+    #wrap{
+        width : 100%;
+        position : static;
+    }
+    .sidebar{
+        width : 100%;
+        position : static;
+    }
+    main{
+        width : 100%;
+        position : static;
+    }
+    .btn_area{
+        display: none;
+    }
+}
