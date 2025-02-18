@@ -1,6 +1,11 @@
 ## 👤Profile
 
-[사진] 김 규 택 
+<header style="padding-left:10px;  width:130px;">
+    <img src="./images/profile/profile_photo.jpg" 
+    style="width:130px; height:130px;  border-radius:50%; object-fit:cover;
+    border:1px solid #000; box-shadow:0 2px 2px rgba(0,0,0,0.5)" alt="profileImg">
+    <p style="text-align:center; font-weight:bold">김 규 택</p>
+</header>
 
 2024 국립공주대학교 KDT 수료생
 
@@ -64,7 +69,12 @@
 - 우리들은 일상에서 혼자 해결할 수 없는 어려움들이 종종 존재함
 - 자신의 주변의 사람들에게 의뢰하여 문제를 해결하고 주변인들은 이를 해결해주며 수익을 창출할 수 있는 기회 제공
 - 접근성이 좋은 모바일 애플리케이션 개발
- 
+
+**[아키텍처]** 
+
+<img src="./kdt_project/Location_based_matching_project-3/images/system_architecture.png"
+style="border-radius:8px; border:1px solid #000;">
+
 **[담당]  Full-Stack**
 - Front
     - 로그인 인증 및 보안/권한 고지 페이지 제작
@@ -86,25 +96,24 @@
 **[시연]**  [Helpme 시연 영상](https://www.youtube.com/watch?v=UELlz0jtkVM&list=PLeIymhSKOH64BZ1DfBw_5RibDxAHDUvmo&index=2)
 
 ---
+<details>
+    <summary>주요 프로젝트 목록</summary>
+    <main>&nbsp;
 
-### 캡스톤 프로젝트
+**1. 실시간 문서 편집 도구 제작** : [real-time-editor](./capstone_project/real_time_editor.md)
 
-- **[개요]**
-    - sa
-    - ss
+**2. 멀티룸 예약 관리 서비스** : [multi-room](./kdt_project/Multiroom_Reservation_project-2/multi_room.md)
 
-### 2차 프로젝트
-
-- **[개요]**
-    - sa
-    - ss
-
-### 1차 프로젝트
-
-- **[개요]**
-    - sa
-    - ss
+**3. 웹 기반 벽돌 깨기 게임** : [brick-out](./kdt_project/Brickout_project-1/brickout.md)
+    </main>
+</details>
 
 ## 🎯 Solo Project
 개인적인 호기심으로 진행한 프로젝트
+<details>
+    <summary>개인 프로젝트 목록</summary>
+    <main>&nbsp;
 
+**1. 개인 프로젝트...** : [temp](./capstone_project/real_time_editor.md)
+    </main>
+</details>
