@@ -46,10 +46,12 @@
     - Web Framework
         - <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Spring_Framework_Logo_2018.svg/330px-Spring_Framework_Logo_2018.svg.png" width="50" height="15" alt="Spring(Spring Boot)"> : Spring Web MVC와 Security, JPA를 활용한 백엔드 개발 경험
         - <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Django_logo.svg/390px-Django_logo.svg.png" width="50" height="15" alt="Django"> : Django Template 언어인 Python을 활용한 서버 사이드 웹 개발 경험
-    - MySQL : SQL을 사용한 DB 생성 및 테이블 설계 가능
-    - NodeJS : ExpressJS, socketIO, WebRTC 기술을 적용한 P2P 환경 구축 경험
+    
+    - <img src="https://www.mysql.com/common/logos/powered-by-mysql-167x86.png" width="40" height="20" alt="MySQL"> : SQL을 사용한 DB 생성 및 테이블 설계 가능
+    - <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1280px-Node.js_logo.svg.png" width="35" height="20" alt="NodeJS"> : ExpressJS, socketIO, WebRTC 기술을 적용한 P2P 환경 구축 경험
 - **Collaboration**
-    - <img src="https://images.seeklogo.com/logo-png/42/1/notion-logo-png_seeklogo-425508.png" width="35" height="25" alt="Notion"> : 템플릿을 활용하여 협업 문서 작성 경험
+
+    - <img src="https://i0.wp.com/get.site/wp-content/uploads/2021/10/notion-logo.png?ssl=1" width="35" height="15" alt="Notion"> : 템플릿을 활용하여 협업 문서 작성 경험
 
 ## 👥Key Project
 
@@ -63,7 +65,7 @@
 - 자신의 주변의 사람들에게 의뢰하여 문제를 해결하고 주변인들은 이를 해결해주며 수익을 창출할 수 있는 기회 제공
 - 접근성이 좋은 모바일 애플리케이션 개발
  
-**[역할] : Full-Stack**
+**[담당]  Full-Stack**
 - Front
     - 로그인 인증 및 보안/권한 고지 페이지 제작
     - 게시글 조회/등록/재등록 페이지 제작
@@ -78,10 +80,10 @@
     - AWS 서버 배포
 
 **[프로젝트 구조]**
-- [Flutter Directory](https://github.com/eropick/eropick.github.io/blob/main/kdt_project/3%EC%B0%A8%20%EC%9C%84%EC%B9%98%20%EA%B8%B0%EB%B0%98%20%EB%8F%84%EC%9A%B0%EB%AF%B8%20%EB%A7%A4%EC%B9%AD%20%EC%8B%9C%EC%8A%A4%ED%85%9C(Helpme)/flutter_project_directory.md)
-- [Spring Directory](https://github.com/eropick/eropick.github.io/blob/main/kdt_project/3%EC%B0%A8%20%EC%9C%84%EC%B9%98%20%EA%B8%B0%EB%B0%98%20%EB%8F%84%EC%9A%B0%EB%AF%B8%20%EB%A7%A4%EC%B9%AD%20%EC%8B%9C%EC%8A%A4%ED%85%9C(Helpme)/spring_project_directory.md)
+- [Flutter Directory](https://github.com/eropick/eropick.github.io/blob/main/kdt_project/Location_based_matching_project-3/flutter_project_directory.md)
+- [Spring Directory](https://github.com/eropick/eropick.github.io/blob/main/kdt_project/Location_based_matching_project-3/spring_project_directory.md)
 
-**[시연]** : [Helpme 시연 영상](https://www.youtube.com/watch?v=UELlz0jtkVM&list=PLeIymhSKOH64BZ1DfBw_5RibDxAHDUvmo&index=2)
+**[시연]**  [Helpme 시연 영상](https://www.youtube.com/watch?v=UELlz0jtkVM&list=PLeIymhSKOH64BZ1DfBw_5RibDxAHDUvmo&index=2)
 
 ### 캡스톤 프로젝트
 
