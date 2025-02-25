@@ -100,9 +100,9 @@ style="border-radius:8px; border:1px solid #000;">
     <summary>주요 프로젝트 목록</summary>
     <main>&nbsp;
 
-**1. 실시간 문서 편집 도구 제작** : [real-time-editor](./capstone_project/real_time_editor.md)
+**1. 실시간 문서 편집 도구 제작** : [Real-time-editor](./capstone_project/real_time_editor.md)
 
-**2. 멀티룸 예약 관리 서비스** : [multi-room](./kdt_project/Multiroom_Reservation_project-2/multi_room.md)
+**2. 멀티룸 예약 관리 서비스** : [Multi-room-Reservation](./kdt_project/Multiroom_Reservation_project-2/multi_room.md)
 
 **3. 웹 기반 벽돌 깨기 게임** : [brick-out](./kdt_project/Brickout_project-1/brickout.md)
     </main>
