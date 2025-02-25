@@ -58,7 +58,7 @@
 ### Helpme! 도우미 매칭 시스템
 
 **[진행 기간]** 
-- '25.01.17 - '25.02.13, 개발인원 4명
+- `25.01.17 - 25.02.13, 개발인원 4명`
 
 **[개요]** 
 - 우리들은 일상에서 혼자 해결할 수 없는 어려움들이 종종 존재함
@@ -87,6 +87,9 @@ style="border-radius:8px; border:1px solid #000;">
 **[프로젝트 구조]**
 - [Flutter Directory](https://github.com/eropick/eropick.github.io/blob/main/kdt_project/Location_based_matching_project-3/flutter_project_directory.md)
 - [Spring Directory](https://github.com/eropick/eropick.github.io/blob/main/kdt_project/Location_based_matching_project-3/spring_project_directory.md)
+
+**[결과 보고서]**
+- [report](https://github.com/eropick/eropick.github.io/blob/main/kdt_project/Location_based_matching_project-3/HelpMe!_Report.pdf)
 
 **[시연]**  [Helpme 시연 영상](https://www.youtube.com/watch?v=UELlz0jtkVM&list=PLeIymhSKOH64BZ1DfBw_5RibDxAHDUvmo&index=2)
 
