@@ -93,6 +93,8 @@ style="border-radius:8px; border:1px solid #000;">
 
 **[시연]**  [Helpme 시연 영상](https://www.youtube.com/watch?v=UELlz0jtkVM&list=PLeIymhSKOH64BZ1DfBw_5RibDxAHDUvmo&index=2)
 
+<img src="./kdt_project/Location_based_matching_project-3/images/project_thumbnail.png">
+
 ---
 <details>
     <summary>주요 프로젝트 목록</summary>

@@ -17,12 +17,18 @@
 - UI
     - 옵션 : 모달 대화상자 및 재시작/일시정지/속도 조절 기능 추가
 
-**[프로젝트 구조]**
+**[시스템 아키텍쳐]**
 <img src="./images/system_architecture.png">
 
+**[프로젝트 구조]**
 - [Project Directory](https://github.com/eropick/eropick.github.io/blob/main/kdt_project/Brickout_project-1/project_directory.md)
+- 클래스 다이어그램 
+
+<img src="./images/csd.png">
 
 **[결과 보고서]**
 - [report](https://github.com/eropick/eropick.github.io/blob/main/kdt_project/Brickout_project-1/Brickout_report.pdf)
 
 **[시연]** [벽돌깨기 웹 게임](http://eropick.github.io/kdt_project/Brickout_project-1/Brickout/Brickout.html)
+
+<img src="./images/game.png">
