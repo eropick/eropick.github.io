@@ -2,7 +2,6 @@
 
 **[진행 기간]** 
 - `24.03 ~ 24.06, 개발인원 3명`
-- `매주 월요일 회의`
 - `개발` : [gimdongjin](https://github.com/gimdongjin), [eropick](https://github.com/eropick), [dorocy1218](https://github.com/dorocy1218)
 
 **[개요]** 
