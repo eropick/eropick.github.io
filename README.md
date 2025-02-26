@@ -45,7 +45,7 @@
 - **Back-end**
     - Web Framework
         - <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Spring_Framework_Logo_2018.svg/330px-Spring_Framework_Logo_2018.svg.png" width="50" height="15" alt="Spring(Spring Boot)"> : Spring Web MVC와 Security, JPA를 활용한 백엔드 개발 경험
-        - <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Django_logo.svg/390px-Django_logo.svg.png" width="50" height="15" alt="Django"> : Django Template 언어인 Python을 활용한 서버 사이드 웹 개발 경험
+        - <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Django_logo.svg/390px-Django_logo.svg.png" width="50" height="15" alt="Django"> : Django Template 언어와 Python을 활용한 서버 사이드 웹 개발 경험
     
     - <img src="https://www.mysql.com/common/logos/powered-by-mysql-167x86.png" width="40" height="20" alt="MySQL"> : SQL을 사용한 DB 생성 및 테이블 설계 가능
     - <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1280px-Node.js_logo.svg.png" width="35" height="20" alt="NodeJS"> : ExpressJS, socketIO, WebRTC 기술을 적용한 P2P 환경 구축 경험
