@@ -104,7 +104,7 @@ style="border-radius:8px; border:1px solid #000;">
 
 **2. 멀티룸 예약 관리 서비스** : [Multi-room-Reservation](./kdt_project/Multiroom_Reservation_project-2/multi_room.md)
 
-**3. 웹 기반 벽돌 깨기 게임** : [brick-out](./kdt_project/Brickout_project-1/brickout.md)
+**3. 웹 기반 벽돌 깨기 게임** : [Brick-out Web Game](./kdt_project/Brickout_project-1/brickout.md)
     </main>
 </details>
 
