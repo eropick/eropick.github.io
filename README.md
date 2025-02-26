@@ -104,14 +104,13 @@ style="border-radius:8px; border:1px solid #000;">
 
 **2. 멀티룸 예약 관리 서비스** : [Multi-room-Reservation](./kdt_project/Multiroom_Reservation_project-2/multi_room.md)
 
-**3. 웹 기반 벽돌 깨기 게임** : [brick-out](./kdt_project/Brickout_project-1/brickout.md)
+**3. 웹 기반 벽돌 깨기 게임** : [Brick-out](./kdt_project/Brickout_project-1/brickout.md)
     </main>
 </details>
 
-## 🎯 Solo Project
-개인적인 호기심으로 진행한 프로젝트
+## 🎯 Study
 <details>
-    <summary>개인 프로젝트 목록</summary>
+    <summary>목록</summary>
     <main>&nbsp;
 
 **1. 개인 프로젝트...** : [temp](./capstone_project/real_time_editor.md)
