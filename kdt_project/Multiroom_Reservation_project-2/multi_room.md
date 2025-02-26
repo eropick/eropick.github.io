@@ -46,6 +46,6 @@
 **[결과 보고서]**
 - [report](https://github.com/eropick/eropick.github.io/blob/main/kdt_project/Multiroom_Reservation_project-2/multiroom_reservation_management_report.pdf)
 
-**[시연]** [멀티룸 예약 관리 플랫폼](http://eropick.github.io/kdt_project/Brickout_project-1/Brickout/Brickout.html)
+**[시연 영상]** [멀티룸 예약 관리 플랫폼](https://www.youtube.com/watch?v=oJLAt4fmx10&list=PLFxn_48ugVWYReQCwFhe-u3dPMN_kV6A5&index=1)
 
 <img src="./images/thumbnail.png">
