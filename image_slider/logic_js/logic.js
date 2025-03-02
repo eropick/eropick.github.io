@@ -42,7 +42,7 @@ window.addEventListener("load",function(){
         // JSON 파일 경로
         const filePath = "./img_info/"+dirName+".json";
         // 이미지 디렉터리 베이스 경로
-        const imgBaseDir = "..";
+        const imgBaseDir = ".";
         // 이미지 슬라이더 데이터 추가하기
         fetch(filePath)  
         .then(response => response.json()) //Json 파싱
