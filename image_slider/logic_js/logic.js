@@ -41,7 +41,8 @@ window.addEventListener("load",function(){
     if(dirName!==undefined && dirName!==null){
         // JSON 파일 경로
         const filePath = "./img_info/"+dirName+".json";
-        
+        // 이미지 디렉터리 베이스 경로
+        const imgBaseDir = "..";
         // 이미지 슬라이더 데이터 추가하기
         fetch(filePath)  
         .then(response => response.json()) //Json 파싱
@@ -56,7 +57,7 @@ window.addEventListener("load",function(){
                 const imgWrapper = document.createElement("div");
                 const imgElem = document.createElement("img");
                 imgWrapper.className="photo-wrapper";
-                imgElem.src = imgMetaData.src;
+                imgElem.src = imgBaseDir+imgMetaData.src;
                 imgElem.alt = imgMetaData.alt;
                 imgElem.addEventListener("dragstart", (e) => e.preventDefault()); //이미지 드래깅 방지
                 imgWrapper.appendChild(imgElem);
