@@ -46,12 +46,19 @@ window.addEventListener("load",function(){
         // 이미지 슬라이더 데이터 추가하기
         fetch(filePath)  
         .then(response => response.json()) //Json 파싱
-        .then(data => { //배열 반환
+        .then(mapData => { //json 반환
             const photos = document.querySelector('.photo');
             const description = document.querySelector('.description>p');
 
             //샘플 노드 제거
             while(photos.firstChild) photos.removeChild(photos.firstChild);
+            
+            const title = mapData["title"];
+            const data = mapData["imgData"];
+
+            //타이틀 설정
+            document.querySelector("#title").innerText = title;
+
             //가져온 json 데이터 파싱
             data.forEach(imgMetaData => {
                 const imgWrapper = document.createElement("div");
