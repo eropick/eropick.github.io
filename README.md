@@ -89,7 +89,7 @@ style="border-radius:8px; border:1px solid #000;">
 - [Spring Directory](https://github.com/eropick/eropick.github.io/blob/main/kdt_project/Location_based_matching_project-3/spring_project_directory.md)
 
 **[결과 보고서]**
-- [슬라이드 요약](./image_slider/index.html?dir_name=helpme)
+- [슬라이드 요약](https://eropick.github.io/image_slider/index.html?dir_name=helpme)
 - [report](https://github.com/eropick/eropick.github.io/blob/main/kdt_project/Location_based_matching_project-3/HelpMe!_Report.pdf)
 
 **[시연]**  [Helpme 시연 영상](https://www.youtube.com/watch?v=UELlz0jtkVM&list=PLeIymhSKOH64BZ1DfBw_5RibDxAHDUvmo&index=2)

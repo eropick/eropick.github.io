@@ -69,7 +69,8 @@ window.addEventListener("load",function(){
                 imgElem.addEventListener("dragstart", (e) => e.preventDefault()); //이미지 드래깅 방지
                 imgWrapper.appendChild(imgElem);
                 photos.appendChild(imgWrapper);
-                descriptionText.push(imgMetaData.description);
+                const descriptionJoin = imgMetaData.description.join("\n");
+                descriptionText.push(descriptionJoin);
             });
             //초기 설명 설정
             if(descriptionText.length>0){
