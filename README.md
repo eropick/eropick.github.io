@@ -89,6 +89,7 @@ style="border-radius:8px; border:1px solid #000;">
 - [Spring Directory](https://github.com/eropick/eropick.github.io/blob/main/kdt_project/Location_based_matching_project-3/spring_project_directory.md)
 
 **[결과 보고서]**
+- [슬라이드 요약](./image_slider/index.html?dir_name=helpme)
 - [report](https://github.com/eropick/eropick.github.io/blob/main/kdt_project/Location_based_matching_project-3/HelpMe!_Report.pdf)
 
 **[시연]**  [Helpme 시연 영상](https://www.youtube.com/watch?v=UELlz0jtkVM&list=PLeIymhSKOH64BZ1DfBw_5RibDxAHDUvmo&index=2)
@@ -97,14 +98,14 @@ style="border-radius:8px; border:1px solid #000;">
 
 ---
 <details>
-    <summary>주요 프로젝트 목록</summary>
+    <summary>外 주요 프로젝트 목록</summary>
     <main>&nbsp;
 
-**1. 실시간 문서 편집 도구 제작** : [Real-time-editor](./capstone_project/real_time_editor.md)
+**실시간 문서 편집 도구 제작** : [Real-time-editor](./capstone_project/real_time_editor.md)
 
-**2. 멀티룸 예약 관리 서비스** : [Multi-room-Reservation](./kdt_project/Multiroom_Reservation_project-2/multi_room.md)
+**멀티룸 예약 관리 서비스** : [Multi-room-Reservation](./kdt_project/Multiroom_Reservation_project-2/multi_room.md)
 
-**3. 웹 기반 벽돌 깨기 게임** : [Brick-out Web Game](./kdt_project/Brickout_project-1/brickout.md)
+**웹 기반 벽돌 깨기 게임** : [Brick-out Web Game](./kdt_project/Brickout_project-1/brickout.md)
     </main>
 </details>
 
