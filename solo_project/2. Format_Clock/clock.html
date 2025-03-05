@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS 포맷팅 시계</title>
+    <style>
+        main{
+            width : 50%;
+            margin : 20vh auto;
+            border : 1px solid black;
+            text-align: center;
+        }
+        p{ font-size: 150%; }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>현재 시간</h1>
+        <p><span></span></p>
+    </main>
+    <script>
+        setInterval(()=>{
+            /* 포맷팅 적용법 */
+            const span=document.querySelector("span");
+            const options = {
+                weekday : "long",
+                year : "numeric",
+                month : "long",
+                day : "numeric",
+                hour : "numeric",
+                minute: "numeric",
+                second: "numeric",
+                timeZone: "Asia/Seoul",
+                //timeZoneName: "short",
+            };
+            let date=new Intl.DateTimeFormat("ko-KR",options).format(new Date());
+            span.innerText=date;
+        },100);
+    </script>
+</body>
+</html>

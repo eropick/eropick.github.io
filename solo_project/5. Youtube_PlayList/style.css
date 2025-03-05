@@ -1,0 +1,38 @@
+body{ margin:0%; padding:0%; }
+header{
+    width:100%;
+    text-align: center; 
+}
+/* 리스트 레이아웃 */
+#sec_list{ 
+    width:60%;
+    float:left;
+}
+/* 재생 프레임 레이아웃 */
+#sec_play{
+    width:40%;
+    float : right;
+    text-align: center;
+}
+/* 텍스트 레이아웃 */
+#sec_text{ float:left;
+    width:80%; height:100%; }
+.Text{ font-size: large;
+    border-radius: 5px;
+    width : 100%; margin : 2px;}
+/* 버튼 레이아웃 */
+#sec_btn{ float:right;
+    width:18%; height:100%; }
+.Btn{ float:left ; font-size: medium;
+    margin : 1px; width : 45%; height: 55px; }
+ol>li:hover{
+    /* 마우스가 올라오면 폰트색 변경 및 크기 2배로 */
+    color: blue;
+    font-size: 200%; 
+}
+ol>li{
+    font-family: 'Trebuchet MS', Arial, sans-serif;    
+    font-size: larger;
+    cursor:grab;
+}
+ol{ line-height: 30px; } /*줄간격*/
