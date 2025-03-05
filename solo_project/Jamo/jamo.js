@@ -249,36 +249,36 @@ class Jamo{
 
 }
 
-//겹자음, 겹모음 분리-결합
+//자음 2개, 모음 2개 분리-결합
 class JamoKeyReplace{
 
-    //겹자음 -> 단자음으로 변경
+    //합쳐진 자음 1개 -> 2개로 분리
     static dblConsonant = {
         "ㄳ" : ["ㄱ","ㅅ"], "ㄵ" : ["ㄴ","ㅈ"], "ㄶ" : ["ㄴ","ㅎ"], "ㄺ" : ["ㄹ","ㄱ"],
         "ㄻ" : ["ㄹ","ㅁ"], "ㄼ" : ["ㄹ","ㅂ"], "ㄽ" : ["ㄹ","ㅅ"], "ㄾ" : ["ㄹ","ㅌ"],
         "ㄿ" : ["ㄹ","ㅍ"], "ㅀ" : ["ㄹ","ㅎ"], "ㅄ" : ["ㅂ","ㅅ"]
     }
 
-    //단자음 2개 -> 겹자음
+    //자음 2개 -> 1개로 결합
     static sglConsonant = {
         "ㄱ_ㅅ" : "ㄳ", "ㄴ_ㅈ" : "ㄵ", "ㄴ_ㅎ" : "ㄶ", "ㄹ_ㄱ" : "ㄺ",
         "ㄹ_ㅁ" : "ㄻ", "ㄹ_ㅂ" : "ㄼ", "ㄹ_ㅅ" : "ㄽ", "ㄹ_ㅌ" : "ㄾ",
         "ㄹ_ㅍ" : "ㄿ", "ㄹ_ㅎ" : "ㅀ", "ㅂ_ㅅ" : "ㅄ"
     }
 
-    //겹모음
+    //합쳐진 모음 1개 -> 2개로 분리
     static dblVowel = {
         "ㅘ" : ["ㅗ","ㅏ"], "ㅙ" : ["ㅗ","ㅐ"], "ㅚ" : ["ㅗ","ㅣ"], "ㅝ" : ["ㅜ","ㅓ"],
         "ㅞ" : ["ㅜ","ㅔ"], "ㅟ" : ["ㅜ","ㅣ"], "ㅢ" : ["ㅡ","ㅣ"]
     }
 
-    //단모음 2개 -> 겹모음
+    //모음 2개 -> 1개로 결합
     static sglVowel = {
         "ㅗ_ㅏ" : "ㅘ", "ㅗ_ㅐ" : "ㅙ", "ㅗ_ㅣ" : "ㅚ", "ㅜ_ㅓ" : "ㅝ",
         "ㅜ_ㅔ" : "ㅞ", "ㅜ_ㅣ" : "ㅟ", "ㅡ_ㅣ" : "ㅢ" 
     }
 
-    //단자음, 단모음으로 변환
+    //단일 자음, 모음 분리
     static cvtSingleJamo(str){
         let result = [];
         for(let i=0;i<str.length;++i){
@@ -308,7 +308,7 @@ class JamoKeyReplace{
         return result;
     }   
     
-    //겹자음, 겹모음으로 변환
+    //2개의 자음과 모음 결합
     static cvtDoubleJamo(str){
         let result = [];
         for(let i=0;i<str.length;++i){
@@ -346,7 +346,7 @@ class JamoKeyReplace{
         return result;
     }
 
-    //단자음 2개를 bind한 값을 반환 -> 없으면 false
+    //자음 2개를 bind한 값을 반환 -> 매핑 테이블에 없으면 false
     static bindSglConsonant(a,b){
         let key = `${a}_${b}`;
         if(Object.keys(JamoKeyReplace.sglConsonant).includes(key))
@@ -355,7 +355,7 @@ class JamoKeyReplace{
             return false;
     }
 
-    //단모음 2개를 bind한 값을 반환 -> 없으면 false
+    //모음 2개를 bind한 값을 반환 -> 매핑 테이블에 없으면 false
     static bindSglVowel(a,b){
         let key = `${a}_${b}`;
         if(Object.keys(JamoKeyReplace.sglVowel).includes(key))
