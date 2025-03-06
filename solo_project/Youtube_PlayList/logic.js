@@ -211,7 +211,7 @@ function getSplitUrl(url){
     }
     else{
         urlSplit = url.split(code[2]); //.be/로 분할한 경우 1번에 저장
-        result = urlSplit[1].split(code[3]); //?f로 분할하면 0번에 저장
+        result = urlSplit[1].split(code[3]); //?로 분할하면 0번에 저장
     }
     return result[0];
 }
