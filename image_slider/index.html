@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <title>Image-slider</title>
+    <link rel="stylesheet" href="./frame_ui/style.css"/>
+    <link rel="stylesheet" href="./frame_ui/webfont.css"/>
+    <script src="./logic_js/logic.js"></script>
+</head>
+<body>
+    <main>
+        <!--타이틀-->
+        <header>
+            <p id="title" class="sigmar-font">
+                Title
+            </p>
+        </header>
+        <!--이미지 슬라이더 컨텐츠-->
+        <section>
+            <div class="contents jua-font">
+                <!--좌측 슬라이드-->
+                <button id="left-slider-btn" class="slider-btn">
+                    <p>&#10094;</p>  
+                </button>
+                
+                <!--사진 및 설명-->
+                <div class="photo-area">                
+                    <div class="photo">
+                        <div class="photo-wrapper">
+                            <img src="https://placehold.co/1280x800" alt="Image" />
+                        </div>
+                    </div>
+                    <div class="description scrollable">
+                        <p>
+                            Description
+                        </p>
+                    </div>    
+                </div>
+                
+                <!--우측 슬라이드-->
+                <button id="right-slider-btn" class="slider-btn">  
+                    <p>&#10095;</p>
+                </button>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

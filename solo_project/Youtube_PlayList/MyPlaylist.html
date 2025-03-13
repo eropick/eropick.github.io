@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head lang="ko">
+        <meta charset="UTF-8">
+        <title>My Playlist</title>
+        <link rel="stylesheet" href="./style.css"/>
+        <script src="./logic.js"></script>
+    </head>
+    <body>
+        <header>
+            <h3>My Playlist</h3>
+            <hr>
+            <form>
+                <section id="sec_text">
+                    <input type="text" id="musicName" oninput="searchMusic()" class="Text" placeholder="음악 이름을 입력해주세요.">
+                    <input type="text" id="musicLink" class="Text" placeholder="매칭할 유튜브 주소를 입력해주세요.">
+                </section>
+                <aside id="sec_btn">
+                    <input type="button" id="addBtn" class="Btn" value="추가" onclick="addMusic()">
+                    <input type="button" id="delBtn" class="Btn" value="삭제" onclick="delMusic(this)">
+                </aside>
+            </form>
+        </header>
+        <section id="sec_list">
+            <ol id="playlist">
+                <!--JS로 리스트 추가-->
+            </ol>
+        </section>
+        <section id="sec_play">
+            <!--기본 이미지-->
+            <img id="img_yt" alt="여기에 영상" src="fork_yt_logo.png">
+        </section>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+*{ margin :0; padding : 0; box-sizing: border-box; }
+main{
+    width : 80%; height : 100vh;
+    margin : 0 auto; overflow-x: hidden; overflow-y: hidden;
+}
+header{ 
+    width : 100%; height:5%; display: flex; 
+    align-items: center; justify-content: center; 
+    font-weight: bold;
+}
+textarea{
+    width : 100%; height : 33%; resize : none; 
+}
+.btns{
+    width: 100%; height:30%; gap:5px; padding : 2px 0px;
+    display: flex; flex-direction: column; 
+}
+button[type="button"]{ flex:1 }
+footer{
+    width : 100%; height : 31%;
+    text-align: center; overflow-y: scroll;
+}

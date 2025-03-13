@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="김규택">
+    <meta name="description" content="project vocabulary">
+    <meta name="environment" content="Vscode">
+    <meta name="subject" content="vocabulary">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="short icon" href=""/>
+    <link rel="stylesheet" href="./style.css" />
+    <title>Vocabulary</title>
+    <script src="./logic.js"></script>
+</head>
+<body>
+    <header><h3>단어장</h3><hr></header>
+    <form>
+        <fieldset>
+            <header id="fileprocess">
+                <label style="font-size: large;margin:1px;">단어장 불러오기 : </label>
+                <script>createFileUploader();</script> 
+                <label class="warning" hidden>내용</label>
+                <br>
+                <input type="text" id="backupName" class="textBox" placeholder="파일명 입력(기본 값 : words)">
+                <input type="button" id="backupVoca" class="actBtn" value="단어장 백업" onclick="sendBackupReq()">
+            </header>
+            <hr>
+            <section>
+                <input type="text" class="textBox" id="txtWord" oninput="searchList()" placeholder="단어를 입력해주세요">
+                <input type="text" class="textBox" id="txtMean" oninput="searchList()" placeholder="의미를 입력해주세요">
+            </section>
+            <aside>
+                <input type="button" id="addBtn" class="actBtn" value="추가" onclick="addVoca()">
+                <input type="button" id="delBtn" class="actBtn" value="삭제" onclick="delVoca()">
+            </aside>
+        </fieldset>
+    </form>
+    <section>
+        <ol id="list">
+            <!--JS코드 여기에는 단어 리스트-->
+        </ol>
+    </section>
+    <aside>
+        <fieldset>
+            <input type="button" class="actBtn" id="genVoca1" value="의미 암기 테이블" onclick="openTable(this)"><br>
+            <input type="button" class="actBtn" id="genVoca2" value="단어 암기 테이블" onclick="openTable(this)"><br>
+            <input type="button" class="actBtn" id="genQuiz" value="퀴즈 생성" onclick="openQuiz()">
+        </fieldset>
+    </aside>
+</body>
+</html>

@@ -1,0 +1,139 @@
+{
+    "title" : "위치 기반 도우미 매칭 시스템(Helpme)",
+    "imgData" : [
+        {
+            "src": "/images/helpme/1.communication.png",
+            "alt": "통신구조",
+            "description": [
+                "[통신 구조]",
+                "-Flutter와 Spring Boot 내장 톰캣 WAS가 REST API로 상호 통신",
+                "-Spring 서버는 RDB에 CRUD 연산을 수행",
+                "-json 형식으로 응답을 받아 클라이언트인 앱에서 처리"
+            ]
+        },
+        {
+            "src": "/images/helpme/2.login.png",
+            "alt": "로그인 구조",
+            "description": [
+                "[인증 과정]",
+                "-Flutter에서 Google OAuth를 통해 인증 후 사용자 정보 발급",
+                "-발급된 정보를 Spring 서버에 전송 후 토큰 유효성 검증",
+                "-검증이 완료되면 회원 정보를 파악 후 accessToken과 refreshToken 발급",
+                "-응답받은 accessToken과 refreshToken은 Flutter 내부에 암호화 보관",
+                "-인가가 필요한 요청 시 accessToken을 포함하여 spring 서버에 요청"
+            ]
+        },
+        {
+            "src": "/images/helpme/3.api_authorization.png",
+            "alt": "인가",
+            "description": [
+                "[인가 필터링]",
+                "-accessToken의 유효성, 만료여부 등의 검증 후 컨트롤러에 전달",
+                "-요청이 유효하지 않은 경우 인가에 대한 에러를 클라이언트에 전달"
+            ]
+        },
+        {
+            "src": "/images/helpme/4.refresh_token.png",
+            "alt": "인가 토큰 재발급",
+            "description": [
+                "[토큰 재발급]",
+                "-accessToken이 유효하지 않은 경우 클라이언트는 refreshToken을 통해 토큰 재발급 필요",
+                "-클라이언트에서는 재발급된 토큰을 사용해서 이전의 요청을 다시 요청하는 코드를 구성",
+                "-또한 refreshToken의 만료 시 인증을 만료시키는 작업이 별도로 필요"
+            ]
+        },
+        {
+            "src": "/images/helpme/5.auto_login.png",
+            "alt": "자동 로그인",
+            "description": [
+                "[로그인]",
+                "-앱 실행 시 보안 처리를 위한 로직 동작",
+                "-Flutter 암호화 저장소에 존재하는 refreshToken을 통해 토큰 재발급",
+                "-accessToken이 정상 발급되면 자동 로그인 처리를 수행",
+                "-refreshToken의 만료 시 다시 로그인을 수행하도록 스크린 이동 처리"
+            ]
+        },
+        {
+            "src": "/images/helpme/6.login_result.png",
+            "alt": "로그인UI",
+            "description": [
+                "[로그인 UI]",
+                "-구글 계정을 사용하여 로그인"
+            ]
+        },
+        {
+            "src": "/images/helpme/7.main_page.png",
+            "alt": "메인스크린",
+            "description": [
+                "[메인 스크린]",
+                "-Haversine 공식을 활용한 거리 계산",
+                "-사용자 주변(반경 2km 이내) 의뢰 게시글들을 목록형태로 표시",
+                "-상단에는 현재 위치를 표기하고 우측에 파트너 알림 확인 버튼",
+                "-우측 하단 둥근 화살표 버튼을 통해 의뢰 게시글을 리프레시",
+                "-우측 하단 + 버튼으로 의뢰 게시글을 등록하는 화면으로 이동",
+                "-서버측 페이지네이션을 적용하여 이전 글들을 무한 스크롤 로딩",
+                "-하단 네비바를 통해 매칭 스크린, 메인 화면(홈), 내 정보를 쉽게 이동"
+            ]
+        },
+        {
+            "src": "/images/helpme/8.post_screen.png",
+            "alt": "게시글 등록",
+            "description": [
+                "[의뢰 게시글 등록]",
+                "-의뢰하고 싶은 내용을 등록할 수 있는 스크린",
+                "-제목, 내용, 시작~종료 시간, 보수, 위치 등록",
+                "-사진은 최대 10장까지 등록 가능"
+            ]
+        },
+        {
+            "src": "/images/helpme/9.location_base_setting.png",
+            "alt": "본인 위치 등록",
+            "description": [
+                "[GPS 기반 등록]",
+                "-지도를 움직여서 본인의 위치 지정",
+                "-우측 하단의 돋보기 아이콘을 사용해서 주소 검색",
+                "-우측 하단의 타겟 아이콘을 사용해서 GPS 기반 위치 탐색"
+            ]
+        },
+        {
+            "src": "/images/helpme/10.application_detail_screen.png",
+            "alt": "파트너 신청하기",
+            "description": [
+                "[의뢰글 상세 및 신청]",
+                "-의뢰자가 등록한 글 확인",
+                "-하단의 신청 버튼을 눌러서 ",
+                "-이미 매칭되었거나 종료된 경우 신청 불가"
+            ]
+        },
+        {
+            "src": "/images/helpme/11.partner_notification.png",
+            "alt": "파트너 신청 알림",
+            "description": [
+                "[파트너 수락]",
+                "-상단 우측의 알림버튼을 클릭해서 파트너 신청 확인",
+                "-파트너 정보 확인 및 파트너 수락/거절 처리",
+                "-신청/수락/거절에 대한 알림 별도 모바일 앱 푸시 알림"
+            ]
+        },
+        {
+            "src": "/images/helpme/12.push_notification.png",
+            "alt": "푸시 알림 구조",
+            "description": [
+                "[푸시 알림]",
+                "-앱에서 인증 완료 시 푸시 알림 서비스 구독",
+                "-서버에서는 신청/수락/거절 등의 알림이 필요한 서비스에 알림 push 요청",
+                "-OneSignal에서는 Spring에서 온 REST API 요청을 확인 후 구독한 id로 푸시 알림"
+            ]
+        },
+        {
+            "src": "/images/helpme/13.contact.png",
+            "alt": "매칭",
+            "description": [
+                "[매칭]",
+                "-파트너로 수락하면 contact 스크린에 매칭 목록 표시",
+                "-사용자와 위치 정보를 간단하게 표시",
+                "-의뢰가 완료된 경우 완료, 불발된 경우 중단 처리"
+            ]
+        }
+    ]
+}

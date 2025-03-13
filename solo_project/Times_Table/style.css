@@ -1,0 +1,13 @@
+main{ 
+    width : 40%;
+    border: 1px solid black;
+    margin : 20px auto;
+    border-radius: 5px;
+}
+header{
+    border-bottom: 3px solid black;
+    text-align:center;
+}
+section{
+    text-align: center;
+}

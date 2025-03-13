@@ -1,0 +1,6 @@
+body{ background-color: antiquewhite; }
+#container{
+    width : 800px;
+    height : 95vh;
+    margin : 2vh auto;
+}
