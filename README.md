@@ -114,20 +114,22 @@ style="border-radius:8px; border:1px solid #000;">
     <summary>목록</summary>
     <main>&nbsp;
 
-**1. 자모 분해 결합** : [Jamo](./solo_project/Jamo/jamo.md)
+**1. 공학용 계산기** : [Calc](./solo_project/Calculator/calculator.md)
 
-**2. 디지털/아날로그 시계** : [GraphicClock](./solo_project/Graphic_Clock/clock.md)
+**2. 자모 분해 결합** : [Jamo](./solo_project/Jamo/jamo.md)
 
-**3. 단어장** : [Voca](./solo_project/ProjectVoca/voca.md)
+**3. 디지털/아날로그 시계** : [GraphicClock](./solo_project/Graphic_Clock/clock.md)
 
-**4. 유튜브 플레이리스트** : [Playlist](./solo_project/Youtube_PlayList/playlist.md)
+**4. 단어장** : [Voca](./solo_project/ProjectVoca/voca.md)
 
-**5. 로또** : [Lotto](./solo_project/Lotto/lotto.md)
+**5. 유튜브 플레이리스트** : [Playlist](./solo_project/Youtube_PlayList/playlist.md)
 
-**6. JS 유틸 제작** : [UtilJS](./solo_project/Util_js/util.md)
+**6. 로또** : [Lotto](./solo_project/Lotto/lotto.md)
 
-**7. 스택** : [Stack](./solo_project/Stack/stack.md)
+**7. JS 유틸 제작** : [UtilJS](./solo_project/Util_js/util.md)
 
-**8. 구구단** : [TimesTable](./solo_project/Times_Table/times_table.md)
+**8. 스택** : [Stack](./solo_project/Stack/stack.md)
+
+**9. 구구단** : [TimesTable](./solo_project/Times_Table/times_table.md)
     </main>
 </details>
