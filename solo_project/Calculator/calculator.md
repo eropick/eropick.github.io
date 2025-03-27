@@ -35,5 +35,5 @@ Queue, Stack을 이용한 중위-후위표기식 변환 및 SyntaxTree 활용 �
   2. 순회가 모두 끝나면 연산자와 필요한 피연산자를 이용해 연산하고 중간 결과를 피연산자 노드에 저장하면서 수식을 계산해나간다.
 
 **[결과]**
-- [공학용 계산기](http://eropick.github.io/solo_project/Calculator/calculator.zip)
+- [공학용 계산기](https://github.com/eropick/eropick.github.io/raw/refs/heads/main/solo_project/Calculator/calculator.zip)
 <img src="./calculator.png">
