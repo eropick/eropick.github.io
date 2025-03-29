@@ -1,5 +1,5 @@
-import {UniqueArray} from "../util_js/data_util.js"
-import {MathUtil} from "../util_js/math_util.js"
+import {UniqueArray} from "https://eropick.github.io/solo_project/Util_js/data_util.js"
+import {MathUtil} from "https://eropick.github.io/solo_project/Util_js/math_util.js"
 
 // 중복을 제거하는 방법
 // 1. Set 집합 자료구조 이용
